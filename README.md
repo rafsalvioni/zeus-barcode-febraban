@@ -1,17 +1,7 @@
 # zeus-barcode-febraban
 Implementa uma API para criação, manipulação e desenho de códigos de barras utilizados pela Federação Brasileira dos Bancos (Febraban)
 
-## Examplo
-Pacotes requeridos...
-```json
-{
-    "require": {
-        "rafsalvioni/zeus-barcode-febraban": "1.*",
-        "rafsalvioni/zeus-barcode-renderer-svg": "1.*"
-    }
-}
-```
-Código de exemplo
+## Exemplo
 ```php
 <?php
 require 'vendor/autoload.php';
