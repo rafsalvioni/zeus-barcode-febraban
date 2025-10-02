@@ -188,6 +188,13 @@ class Bloqueto extends AbstractFebraban
         $fator = (int)$this->getFatorVecto();
         if ($fator > 0) {
             $vecto = clone self::$dataBase;
+            if ($fator < 4500) {
+                // Corrigindo a "zerada" da data base
+                $diff = (int)(new \DateTime())->diff($vecto)->days;
+                $periods = (int)($diff / 10000);
+                $add = $periods * 9000;
+                $vecto->modify("+$add days");
+            }
             $vecto->modify("+$fator days");
             return $vecto;
         }
@@ -208,6 +215,9 @@ class Bloqueto extends AbstractFebraban
         $diff = $vencto ?
                 (int)self::$dataBase->diff($vencto)->days :
                 0;
+        while ($diff > 9999) { // Corrigindo bug dos 4 digitos
+            $diff = ($diff % 10000) + 1000;
+        }
         return $this->comFatorVencto($diff);
     }
 

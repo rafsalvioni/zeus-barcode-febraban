@@ -58,7 +58,7 @@ abstract class AbstractFebraban extends Interleaved implements
         
         while (!empty($data)) {
             $prod   = (string)($weight * (int)\array_pop($data));
-            $sum   += $prod{0} + (isset($prod{1}) ? $prod{1} : 0);
+            $sum   += $prod[0] + (isset($prod[1]) ? $prod[1] : 0);
             $weight = $weight == 2 ? 1 : 2;
         }
         

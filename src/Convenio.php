@@ -214,7 +214,7 @@ class Convenio extends AbstractFebraban
      */
     protected function calcChecksum($data)
     {
-        $id = empty($this->data) ? $data{2} : $this->data{2};
+        $id = empty($this->data) ? $data[2] : $this->data[2];
         switch ($id) {
             case '6':
             case '7':

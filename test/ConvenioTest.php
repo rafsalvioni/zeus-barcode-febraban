@@ -8,7 +8,7 @@ use Zeus\Barcode\Febraban\Convenio;
  * 
  * @author Rafael M. Salvioni
  */
-class ConvenioFebrabanTest extends \PHPUnit_Framework_TestCase
+class ConvenioFebrabanTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @test

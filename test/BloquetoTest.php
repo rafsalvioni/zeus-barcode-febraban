@@ -8,7 +8,7 @@ use Zeus\Barcode\Febraban\Bloqueto;
  * 
  * @author Rafael M. Salvioni
  */
-class BloquetoTest extends \PHPUnit_Framework_TestCase
+class BloquetoTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @test
